@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7604ac2f-f28e-4f72-9742-2c2040223bca" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ZiXTpmkGfXb4iOxFIVLaeVLbSS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Sitio web para meko/frontend_tienda_meko/src/pages/admin",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Sitio web para meko\frontend_tienda_meko\src\pages\admin" />
+      <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko\src\pages\admin" />
+      <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko" />
+      <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko\src\componentes\pages" />
+      <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko\src\componentes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko\src" />
+      <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko\src\componentes\pages" />
+      <recent name="E:\FRONTEND\REACT\frontend_tienda_multivendedor\src" />
+      <recent name="E:\FRONTEND\REACT\frontend_tienda_multivendedor\src\componentes\cliente" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="npm.start" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7604ac2f-f28e-4f72-9742-2c2040223bca" name="Changes" comment="" />
+      <created>1702905883682</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702905883682</updated>
+      <workItem from="1702905891778" duration="1112000" />
+      <workItem from="1702918027702" duration="28338000" />
+      <workItem from="1703017929888" duration="10321000" />
+      <workItem from="1703117411779" duration="3285000" />
+      <workItem from="1703276716511" duration="1464000" />
+      <workItem from="1703278218162" duration="7213000" />
+      <workItem from="1703293140309" duration="13908000" />
+      <workItem from="1703432875961" duration="23799000" />
+      <workItem from="1703510057065" duration="21749000" />
+      <workItem from="1703602330092" duration="6290000" />
+      <workItem from="1703625816912" duration="13333000" />
+      <workItem from="1703686630292" duration="19989000" />
+      <workItem from="1703781286019" duration="23902000" />
+      <workItem from="1703882837365" duration="17077000" />
+      <workItem from="1703948692288" duration="6419000" />
+      <workItem from="1703976438228" duration="11717000" />
+      <workItem from="1704037330060" duration="5856000" />
+      <workItem from="1704125405080" duration="20715000" />
+      <workItem from="1704214254264" duration="7246000" />
+      <workItem from="1704295762759" duration="6622000" />
+      <workItem from="1704327651147" duration="7673000" />
+      <workItem from="1704352129722" duration="1177000" />
+      <workItem from="1704379626125" duration="1866000" />
+      <workItem from="1704414674804" duration="5720000" />
+      <workItem from="1704429426681" duration="2319000" />
+      <workItem from="1704491272877" duration="22067000" />
+      <workItem from="1704591371323" duration="5059000" />
+      <workItem from="1704676036132" duration="9751000" />
+      <workItem from="1712511239090" duration="2552000" />
+      <workItem from="1712539158346" duration="12208000" />
+      <workItem from="1712583314255" duration="2948000" />
+      <workItem from="1712699878171" duration="374000" />
+      <workItem from="1712961375656" duration="2542000" />
+      <workItem from="1712963980729" duration="8102000" />
+      <workItem from="1712978535466" duration="10202000" />
+      <workItem from="1713018277148" duration="7802000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

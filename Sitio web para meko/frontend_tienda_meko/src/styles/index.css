@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* styles.css */
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #ffffff;
+  padding: 20px;
+  z-index: 1; /* Asegura que el footer esté en segundo plano */
+}
+
+/* Dashboard.css */
+
+.dashboard-container {
+  display: flex;
+  height: calc(
+    100vh - 64px
+  ); /* Altura total de la ventana menos la altura del header */
+}
+
+.main-panel {
+  flex: 1;
+  padding: 20px;
+}
+
+.welcome-message {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.welcome-message h1,
+h2 {
+  font-size: 2.5rem;
+  color: #2c5282; /* Azul suave */
+}
+
+.welcome-message p {
+  color: #333;
+}
+
+.fade-in {
+  animation: fadeIn ease 0.5s; /* Ajusta la duración a 1.5 segundos */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Mueve hacia arriba 20px */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a la posición original */
+  }
+}
+
+.text-blue-500 {
+  text-decoration: underline; /* Subraya los enlaces */
+}
+
+.text-blue-500:hover {
+  text-decoration: none; /* Subraya los enlaces al pasar el cursor sobre ellos */
+}
