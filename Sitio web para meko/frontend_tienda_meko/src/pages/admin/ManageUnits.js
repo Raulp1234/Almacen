@@ -80,13 +80,7 @@ const ManageUnits = () => {
 
   // Función para manejar la modificación de una unidad de medida
   const handleEditUnity = (unityId) => {
-    // Lógica para modificar la unidad de medida con el ID proporcionado
-    console.log(`Modificar unidad de medida con ID ${unityId}`);
-
-    console.log("categoryId: ",unityId)
     setEditUnidadId(unityId);
-    //  editCategoryId=categoryId;
-    console.log("editCategoryId: ", editUnidadId); // Agregar este console.log
     setShowEditForm(true);
   };
 
@@ -110,7 +104,7 @@ const ManageUnits = () => {
 
   };
   function mostrarConfirmacionParaEliminarSolo(unidad_id) {
-    let confirmacion = window.confirm("Estas seguro que desea eliminar esta categoría ?");
+    let confirmacion = window.confirm("Estas seguro que desea eliminar esta unidad de medida ?");
 
     if (confirmacion) {
       fetch(`${url}${parte_de_la_url_unidades_eliminar}${unidad_id}`+'/', {
@@ -120,7 +114,7 @@ const ManageUnits = () => {
             if (response.ok) {
               // Producto eliminado correctamente, recargar la página
               fetch_data(`${url}${parte_de_la_url_unidades}`);
-              window.location.reload();
+             // window.location.reload();
             } else {
               console.error('Error al eliminar la unidad de medida');
             }
@@ -132,7 +126,7 @@ const ManageUnits = () => {
     }
   }
   function mostrarConfirmacionParaEliminar(unidades_ids) {
-    let confirmacion = window.confirm("¿Estás seguro que deseas eliminar estas categorías?");
+    let confirmacion = window.confirm("¿Estás seguro que deseas eliminar estas unidades de medida?");
     if (confirmacion) {
       unidades_ids.forEach(unidad_id => {
         fetch(`${url}${parte_de_la_url_unidades_eliminar}${unidad_id}/`, {
@@ -155,7 +149,7 @@ const ManageUnits = () => {
 
   return (
     <div className="m-8 fade-in">
-      <h2 className="mb-7">Gestionar Unidades de medida</h2>
+      <h2 className="text-2xl font-semibold mb-4">Gestionar Unidades de medida</h2>
       <div className="mb-4 flex">
         <button
           onClick={handleInsertUnity}
@@ -203,6 +197,7 @@ const ManageUnits = () => {
               <td className="border px-4 py-2">{unity.titulo}</td>
               <td className="border px-4 py-2">{unity.detalles}</td>
               <td className="px-4 py-2">
+                <div className="flex items-center">
                 {/* Botones de eliminar y modificar con íconos */}
                 <button
                   onClick={() => handleEditUnity(unity.id)}
@@ -216,6 +211,7 @@ const ManageUnits = () => {
                 >
                   <FaTrash />
                 </button>
+                </div>
               </td>
             </tr>
           ))}
@@ -238,8 +234,7 @@ const ManageUnits = () => {
                       <UpdateUnitForm
                           onSubmit={handleFormSubmit}
                           onCancel={handleCancelForm}
-                          unidad_id={editUnidadId || undefined} // Pasar undefined si editCategoryId es vacío
-
+                          unityId={editUnidadId || undefined} // Pasar undefined si editCategoryId es vacío
                           isEditForm={true}
                       />
               )}

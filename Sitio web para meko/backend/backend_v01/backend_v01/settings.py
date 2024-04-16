@@ -92,7 +92,7 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.mysql',
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': 'localhost',
-        'PORT': '5433',
+        'PORT': '5432',
         'USER': 'postgres',
         'PASSWORD': 'shido.0000',
         'NAME': 'bd_almacen',

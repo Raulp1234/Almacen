@@ -8,8 +8,9 @@ const ManageCategories = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [showInsertForm, setShowInsertForm] = useState(false); // Estado para controlar la visibilidad del formulario de inserción
   const [showEditForm, setShowEditForm] = useState(false); // Estado para controlar la visibilidad del formulario de edición
-  const [editCategoryId, setEditCategoryId] = useState(''); // ID de la categoría que se está editando
- // let editCategoryId='';
+  const [editCategoryId, setEditCategoryId] = useState(false); // Estado para controlar la visibilidad del formulario de edición
+
+
   const [url, setUrl] = useState('http://127.0.0.1:8000/api');
   const parte_de_la_url_categoria = '/categorias/';
   const parte_de_la_url_categoria_eliminar = '/categoria/';
@@ -72,10 +73,7 @@ const ManageCategories = () => {
   };
 
   const handleEditCategory = (categoryId) => {
-    console.log("categoryId: ",categoryId)
     setEditCategoryId(categoryId);
-  //  editCategoryId=categoryId;
-    console.log("editCategoryId: ", editCategoryId); // Agregar este console.log
     setShowEditForm(true);
 
   };
@@ -87,11 +85,11 @@ const ManageCategories = () => {
   const handleFormSubmit = (formData) => {
     console.log("Datos del formulario:", formData);
 
-    console.log("Datos del formulario:", formData);
+
     if (showInsertForm) {
       // Lógica para enviar el formulario de inserción
     } else if (showEditForm) {
-      UpdateCategoryForm.categoria_id=editCategoryId; // Pasar undefined si editCategoryId es vacío
+    //  UpdateCategoryForm.categoria_id=editCategoryId; // Pasar undefined si editCategoryId es vacío
       // Lógica para enviar el formulario de edición
     }
     setShowInsertForm(false);
@@ -109,7 +107,7 @@ const ManageCategories = () => {
             if (response.ok) {
               // Producto eliminado correctamente, recargar la página
               fetch_data(`${url}${parte_de_la_url_categoria}`);
-              window.location.reload();
+              //window.location.reload();
             } else {
               console.error('Error al eliminar la categoría');
             }
@@ -145,7 +143,7 @@ const ManageCategories = () => {
 
   return (
       <div className="m-8 fade-in">
-        <h2 className="mb-7">Gestionar Categorías</h2>
+        <h2 className="text-2xl font-semibold mb-4">Gestionar Categorías</h2>
         <div className="mb-4 flex">
           <button
               onClick={handleInsertCategory}
@@ -181,7 +179,7 @@ const ManageCategories = () => {
           </thead>
           <tbody>
           {categories.map((category) => (
-              <tr key={category.id}>
+              <tr key={category.id} >
                 <td className="border px-4 py-2">
                   <input
                       type="checkbox"
@@ -193,14 +191,13 @@ const ManageCategories = () => {
                 <td className="border px-4 py-2">{category.titulo}</td>
                 <td className="border px-4 py-2">{category.detalles}</td>
                 <td className="px-4 py-2">
+
+                  <div className="flex items-center">
                   {/* Botones de eliminar y modificar con íconos */}
                   <button
                       onClick={() => handleEditCategory(category.id)}
                       className="text-blue-600 mr-3 hover:text-blue-900"
-
-
                   >
-
                     <FaEdit />
                   </button>
                   <button
@@ -209,6 +206,7 @@ const ManageCategories = () => {
                   >
                     <FaTrash />
                   </button>
+                  </div>
                 </td>
               </tr>
           ))}
@@ -226,13 +224,12 @@ const ManageCategories = () => {
                         isEditForm={false}
                     />
                 ) : (
-                    console.log("Valor de editCategoryId:", editCategoryId),
+                    //console.log("Valor de editCategoryId:", editCategoryId),
                     // Formulario de edición
                     <UpdateCategoryForm
                         onSubmit={handleFormSubmit}
                         onCancel={handleCancelForm}
-                        categoria_id={editCategoryId || undefined} // Pasar undefined si editCategoryId es vacío
-
+                        categoriaId={editCategoryId || undefined} // Pasar undefined si editCategoryId es vacío
                         isEditForm={true}
                     />
                 )}

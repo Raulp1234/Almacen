@@ -56,6 +56,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/admin/Dashboard";
 import Header from "./componentes/Header";
+import Logout from "./pages/logout";
 
 const moneda='mn';
 /*hasta aqui*/
@@ -78,6 +79,7 @@ function App() {
                               <Route path="/login" element={<Login />} />
                               <Route path="/register" element={<Register />} />
                               <Route path="/dashboard/*" element={<Dashboard />} />
+                              <Route path={'/logout'} element={<Logout/>} />
                           </Routes>
                           <Footer />
                       </div>
@@ -138,7 +140,7 @@ function App() {
 
           {/*  </CarritoContext.Provider>
           </TipoMonedaContext.Provider>*/}
-         <Footer />
+
       </div>
   );
 }

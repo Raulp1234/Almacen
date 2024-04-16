@@ -30,7 +30,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Sitio web para meko/frontend_tienda_meko/src/pages/admin",
+    "last_opened_file_path": "E:/Programas hechos por Jonathan/Sitio web para meko/frontend_tienda_meko/src/componentes",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -43,13 +43,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Sitio web para meko\frontend_tienda_meko\src\pages\admin" />
+      <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko\src\componentes" />
       <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko\src\pages\admin" />
       <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko" />
       <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko\src\componentes\pages" />
-      <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko\src\componentes" />
+      <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko\src\pages" />
       <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko\src" />
       <recent name="E:\Programas hechos por Jonathan\Sitio web para meko\frontend_tienda_meko\src\componentes\pages" />
       <recent name="E:\FRONTEND\REACT\frontend_tienda_multivendedor\src" />
@@ -118,7 +119,8 @@
       <workItem from="1712961375656" duration="2542000" />
       <workItem from="1712963980729" duration="8102000" />
       <workItem from="1712978535466" duration="10202000" />
-      <workItem from="1713018277148" duration="7802000" />
+      <workItem from="1713194039400" duration="18634000" />
+      <workItem from="1713219974910" duration="5715000" />
     </task>
     <servers />
   </component>

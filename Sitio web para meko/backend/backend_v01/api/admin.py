@@ -47,7 +47,7 @@ class ProductosAdmin(admin.ModelAdmin):
     #  list_display = ['titulo', 'precio', 'precioUSD', 'descargas']
     list_display = ['titulo', 'precio', 'precioUSD']
     list_editable = ['precioUSD']
-    prepopulated_fields = {'slug': ('titulo',)}
+    #prepopulated_fields = {'slug': ('titulo',)}
     inlines = [
         ImagenesProductosEnLinea,
     ]

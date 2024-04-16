@@ -27,8 +27,8 @@ class producto(models.Model):
     detalles = models.TextField(null=True)
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     precioUSD = models.DecimalField(max_digits=10, decimal_places=2, default=80)
-    slug = models.CharField(max_length=300, unique=True, null=True)
-    etiquetas = models.TextField(null=True)
+   # slug = models.CharField(max_length=300, unique=True, null=True)
+   # etiquetas = models.TextField(null=True)
     imagen = models.ImageField(upload_to='product_imgs/', null=True)
     cantidad = models.IntegerField()
     unidad_medida = models.ForeignKey(unidad_medida_productos, on_delete=models.SET_NULL, null=True,
@@ -41,14 +41,14 @@ class producto(models.Model):
     def __str__(self):
         return self.titulo
 
-    def tag_list(self):
-        if self.etiquetas is not None:
-            taglist = self.etiquetas.split(',')
-            return taglist
-        else:
+        # def tag_list(self):
+        #    if self.etiquetas is not None:
+        #      taglist = self.etiquetas.split(',')
+        #     return taglist
+        #  else:
             # Puedes manejar el caso en que self.etiquetas sea None de alguna manera,
             # por ejemplo, devolver una lista vacía o levantar una excepción.
-            return []
+        #     return []
 
 
 class imagenes_productos(models.Model):

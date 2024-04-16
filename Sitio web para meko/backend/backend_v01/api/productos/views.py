@@ -36,6 +36,13 @@ class lista_de_productos(generics.ListCreateAPIView):
         logger = logging.getLogger(__name__)
         logger.debug("Datos del cuerpo de la solicitud: %s", request.data)
 
+
+        # Aquí puedes agregar los print para ver los datos entrantes desde el frontend
+        print("Datos del cuerpo de la solicitud: ", request.data)
+        print("categoria_id: ", request.data.get('categoria'))
+        print("vendedor_id: ", request.data.get('vendedor'))
+        print("unidad_medida_id: ", request.data.get('unidad_medida'))
+
         # Asegúrate de que 'pedido' y 'producto' estén presentes en request.data y no sean None
         categoria_id = request.data.get('categoria')
         vendedor_id = request.data.get('vendedor')
@@ -88,7 +95,7 @@ class lista_de_productos(generics.ListCreateAPIView):
             return Response({'error': 'Pedido ID o Producto ID no proporcionado'}, status=status.HTTP_400_BAD_REQUEST)
 
 
-class lista_de_etiquetas_productos(generics.ListCreateAPIView):
+"""class lista_de_etiquetas_productos(generics.ListCreateAPIView):
     queryset = models.producto.objects.all()
     serializer_class = serializers.listaProductosSerializer
 
@@ -103,7 +110,7 @@ class lista_de_etiquetas_productos(generics.ListCreateAPIView):
         else:
             print("etiquetas no proporcionadas en la solicitud")
 
-        return qs
+        return qs"""
 
 
 class lista_de_productos_relacionados(generics.ListCreateAPIView):

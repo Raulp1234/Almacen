@@ -42,8 +42,8 @@ class listaProductosSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = producto
-        fields = ['id', 'categoria', 'vendedor', 'titulo', 'detalles', 'precio', 'slug', 'tag_list',
-                  'imagen', 'precioUSD', 'etiquetas', 'cantidad', 'unidad_medida']
+        fields = ['id', 'categoria', 'vendedor', 'titulo', 'detalles', 'precio',
+                  'imagen', 'precioUSD', 'cantidad', 'unidad_medida']
 
         """fields = ['id', 'categoria', 'vendedor', 'titulo', 'detalles', 'precio', 'slug', 'tag_list',
                   'imagen', 'precioUSD', 'etiquetas', 'cantidad', 'unidad_medida',
@@ -66,10 +66,9 @@ class detallesProductosSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = producto
-        fields = ['id', 'categoria', 'vendedor', 'titulo', 'detalles', 'precio', 'slug', 'tag_list',
+        fields = ['id', 'categoria', 'vendedor', 'titulo', 'detalles', 'precio',
 
-                  'imagen_producto', 'imagen', 'precioUSD', 'cantidad', 'unidad_medida',
-                  'etiquetas']
+                  'imagen_producto', 'imagen', 'precioUSD', 'cantidad', 'unidad_medida']
 
         """fields = ['id', 'categoria', 'vendedor', 'titulo', 'detalles', 'precio', 'slug', 'tag_list',
 

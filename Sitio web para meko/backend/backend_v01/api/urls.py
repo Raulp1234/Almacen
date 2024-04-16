@@ -19,7 +19,7 @@ from api.pedidos.views import lista_de_pedidos, detalles_pedidos, actualizar_est
     cliente_lista_direcciones, direccion_de_cliente_por_defecto, cliente_dashboard, vendedor_registrarse, \
     vendedor_iniciar_sesion, vendedor_dashboard, cliente_cambiar_contrasenha, vendedor_cambiar_contrasenha"""
 
-from api.productos.views import detalles_categorias, lista_de_categorias, lista_de_etiquetas_productos, \
+from api.productos.views import detalles_categorias, lista_de_categorias, \
     lista_de_productos_relacionados, producto_imagenes, producto_imagenes_detalles, \
     producto_imagenes_detalles_eliminar, listaUnidadesDeMedida, detallesUnidadesDeMedida
 
@@ -62,7 +62,7 @@ urlpatterns = [
     # productos
     path('productos/', lista_de_productos.as_view(), name='productos_process'),
     path('producto/<int:pk>/', detalles_productos.as_view(), name='productos_pk_process'),
-    path('productos/<str:etiquetas>/', lista_de_etiquetas_productos.as_view(), name='productos-por-etiquetas'),
+    #path('productos/<str:etiquetas>/', lista_de_etiquetas_productos.as_view(), name='productos-por-etiquetas'),
     path('productos-relacionados/<int:pk>/', lista_de_productos_relacionados.as_view(), name='productos-relacionados'),
     path('producto-imagenes/', producto_imagenes.as_view(), name='producto-imagenes'),
     path('producto-imagenes/<int:producto_id>', producto_imagenes_detalles.as_view(),

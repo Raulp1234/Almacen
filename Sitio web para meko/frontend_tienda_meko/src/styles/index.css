@@ -2,26 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 /* styles.css */
-
-/* Footer */
-footer {
-  position: fixed;
-  bottom: 0;
+.footer {
+  position: relative; /* Cambiar a posición relativa */
+  bottom: 0; /* Asegurarse de que el footer se mantenga en la parte inferior */
   width: 100%;
   background-color: #333;
   color: #ffffff;
-  padding: 20px;
-  z-index: 1; /* Asegura que el footer esté en segundo plano */
+  padding: 1rem;
 }
+
 
 /* Dashboard.css */
 
 .dashboard-container {
   display: flex;
-  height: calc(
-    100vh - 64px
-  ); /* Altura total de la ventana menos la altura del header */
+  height: 100vh; /* Ajusta la altura del contenedor principal al 100% del viewport */
 }
+
+
 
 .main-panel {
   flex: 1;
@@ -64,4 +62,94 @@ h2 {
 
 .text-blue-500:hover {
   text-decoration: none; /* Subraya los enlaces al pasar el cursor sobre ellos */
+}
+
+/* Estilos para mantener los botones juntos */
+.flex {
+  display: flex;
+}
+
+/* Estilos para el contenedor de la tabla con desplazamiento horizontal */
+.table-container {
+  max-width: 100%; /* Ajustar al ancho máximo del contenedor */
+}
+.sidebar {
+  flex: 1;
+  height: 100%; /* Ajusta la altura del sidebar al 100% del contenedor principal */
+}
+
+.sidebar {
+  overflow-y: hidden; /* Evita el desplazamiento vertical en el sidebar */
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Para colocar los elementos a la derecha */
+  align-items: center;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+.content-container {
+  flex: 1;
+  overflow: auto; /* Agrega un scroll si el contenido excede el tamaño */
+}
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Apila el sidebar encima del contenido principal en dispositivos móviles */
+  }
+
+  .sidebar {
+    width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+  }
+
+  .content-container {
+    overflow-x: auto; /* Agrega un scroll horizontal si es necesario en dispositivos móviles */
+  }
+}
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto; /* Agrega un scroll horizontal si la tabla es demasiado ancha */
+  }
+}
+.content-container {
+  flex: 1;
+  overflow: auto;
+  margin-bottom: 3rem; /* Ajustar según el tamaño del footer */
+}
+.footer {
+  z-index: 1; /* Asegurar que el footer esté detrás de otros elementos */
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Altura del 100% de la ventana visible */
+}
+.sidebar {
+  flex: 1; /* Hace que el sidebar ocupe todo el espacio disponible */
+  overflow-y: auto; /* Agrega un scroll vertical si es necesario */
+}
+/* Estilos para el sidebar */
+.sidebar {
+  flex: 1; /* Hace que el sidebar ocupe todo el espacio disponible */
+  overflow-y: auto; /* Agrega un scroll vertical si es necesario */
+}
+
+/* Estilos para el footer */
+.footer {
+  position: relative; /* Cambiar a posición relativa */
+  bottom: 0; /* Asegurarse de que el footer se mantenga en la parte inferior */
+  width: 100%;
+  background-color: #333;
+  color: #ffffff;
+  padding: 1rem;
 }

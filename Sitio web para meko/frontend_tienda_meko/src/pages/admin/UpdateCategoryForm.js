@@ -1,71 +1,13 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
-import {useLocation, useParams} from "react-router-dom";
 
-/*const CategoryForm = ({ onSubmit, onCancel }) => {
+function UpdateCategoryForm ({onCancel,categoriaId  }){
 
-  const [url, setUrl] = useState('http://127.0.0.1:8000/api');
-  const parte_de_la_url_categorias = '/categorias/';
-  const parte_de_la_url_parte_de_la_url_categoria = '/categorias/';
-
-  const [Mensaje_error,setMensaje_error] = useState('');
-  const [Mensaje_exitoso,setMensaje_exitoso] = useState('');
-
-
-  const [formData, setFormData] = useState({
-    // Define los campos del formulario y su estado inicial
-    titulo: "",
-    detalles: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    formData.append('titulo', formData.titulo);
-    formData.append('detalles', formData.detalles);
-
-    axios.post(`${url}${parte_de_la_url_parte_de_la_url_categoria}`,formData,{
-      headers: {
-        'content-type': 'multipart/form-data'
-      }
-    })
-        .then(function (response){
-          if(response.status ===201){
-            setMensaje_error('');
-            setMensaje_exitoso("Categoría creada con éxito");
-
-            setFormData({
-              'titulo': '',
-              'detalles': '',
-
-            });
-
-
-          }
-          else{
-            setMensaje_error('Hay error en los datos');
-            setMensaje_exitoso('');
-          }
-        })
-        .catch(function (error){
-          console.log(error.response.data);
-        });
-    onSubmit(formData);
-  };*/
-function UpdateCategoryForm ({onCancel }){
   const vendedor_id=localStorage.getItem('vendedor_id');
   const [url, setUrl] = useState('http://127.0.0.1:8000/api');
   const parte_de_la_url_categorias = '/categorias/';
-  const parte_de_la_url_parte_de_la_url_categoria = '/categorias/';
-  //const {categoria_id} = useParams();
-    const location = useLocation();
-    const categoria_id = new URLSearchParams(location.search).get("categoria_id");
 
-  const parte_de_la_url_categoria_especifico = '/categoria/'+parseInt(categoria_id)+'/';
+  const parte_de_la_url_categoria_especifico = '/categoria/'+parseInt(categoriaId)+'/';
 
   const [Mensaje_error,setMensaje_error] = useState('');
   const [Mensaje_exitoso,setMensaje_exitoso] = useState('');
@@ -154,9 +96,25 @@ function UpdateCategoryForm ({onCancel }){
   };
 
   useEffect(() => {
-    fetch_data(`${url}${parte_de_la_url_categorias}`);
-      console.log("categoria_id: ",categoria_id )
-  }, []);
+    fetch_data_categoria(`${url}${parte_de_la_url_categoria_especifico}`);
+
+  }, [categoriaId]);
+
+    function fetch_data_categoria(url) {
+        fetch(url)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then((data) => {
+                setCategoriaData(data); // Utiliza setProductoData para actualizar el estado
+            })
+            .catch((error,data) => {
+                console.error("Error fetching data:", error);
+            });
+    }
   function fetch_data(url) {
     fetch(url)
 
@@ -218,7 +176,7 @@ function UpdateCategoryForm ({onCancel }){
           Cancelar
         </button>
         <button onClick={submitHandler}
-          type="button"
+          type="submit"
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
           Guardar
