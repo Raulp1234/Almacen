@@ -1,1 +1,1 @@
-1-Arreglar la paginacion
+1-Arreglar para que no se pueda acceder por la url
